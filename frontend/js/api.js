@@ -4,7 +4,7 @@
  * JSON parsing, and centralizes 401 handling (redirect to login).
  */
 
-const API_BASE = "http://localhost:8080/api";
+const API_BASE = "https://advanced-banking-system-java-production.up.railway.app/api";
 
 const Storage = {
     getToken: () => localStorage.getItem("banking_token"),
