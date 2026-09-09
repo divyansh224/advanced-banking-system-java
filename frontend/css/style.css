@@ -1,0 +1,145 @@
+:root {
+    --brand-navy: #0b2545;
+    --brand-blue: #13315c;
+    --brand-accent: #1d7874;
+    --brand-gold: #c9a24b;
+    --bg-soft: #f4f6f9;
+}
+
+body {
+    background-color: var(--bg-soft);
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    color: #1c2733;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.navbar-bank {
+    background: linear-gradient(90deg, var(--brand-navy), var(--brand-blue));
+}
+
+.navbar-bank .nav-link,
+.navbar-bank .navbar-brand {
+    color: #f4f6f9 !important;
+}
+
+.navbar-bank .nav-link:hover {
+    color: var(--brand-gold) !important;
+}
+
+.auth-wrapper {
+    min-height: calc(100vh - 56px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+}
+
+.auth-card {
+    max-width: 440px;
+    width: 100%;
+    border: none;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(11, 37, 69, 0.12);
+}
+
+.auth-card .card-header {
+    background: var(--brand-navy);
+    color: #fff;
+    border-radius: 14px 14px 0 0 !important;
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.btn-bank {
+    background-color: var(--brand-navy);
+    border-color: var(--brand-navy);
+    color: #fff;
+}
+
+.btn-bank:hover {
+    background-color: var(--brand-blue);
+    border-color: var(--brand-blue);
+    color: #fff;
+}
+
+.btn-accent {
+    background-color: var(--brand-accent);
+    border-color: var(--brand-accent);
+    color: #fff;
+}
+
+.btn-accent:hover {
+    background-color: #145e5a;
+    border-color: #145e5a;
+    color: #fff;
+}
+
+.card-elevated {
+    border: none;
+    border-radius: 14px;
+    box-shadow: 0 6px 20px rgba(11, 37, 69, 0.08);
+}
+
+.balance-card {
+    background: linear-gradient(135deg, var(--brand-navy), var(--brand-accent));
+    color: #fff;
+    border-radius: 16px;
+}
+
+.balance-card .balance-amount {
+    font-size: 2.4rem;
+    font-weight: 700;
+}
+
+.account-number {
+    letter-spacing: 2px;
+    font-family: 'Courier New', monospace;
+}
+
+.badge-active { background-color: #1d7874; }
+.badge-inactive, .badge-closed, .badge-frozen { background-color: #9aa5b1; }
+
+.table-transactions th {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #5c6b7a;
+}
+
+.txn-credit { color: #1d7874; font-weight: 600; }
+.txn-debit { color: #b23a48; font-weight: 600; }
+
+.status-success { color: #1d7874; }
+.status-failed { color: #b23a48; }
+.status-pending { color: #c9a24b; }
+
+.alert-fixed {
+    position: fixed;
+    top: 70px;
+    right: 20px;
+    z-index: 1080;
+    min-width: 280px;
+}
+
+.stat-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(11, 37, 69, 0.08);
+    color: var(--brand-navy);
+    font-size: 1.3rem;
+}
+
+footer.bank-footer {
+    color: #7d8894;
+    font-size: 0.85rem;
+    text-align: center;
+    padding: 1.5rem 0;
+}

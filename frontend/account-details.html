@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0">
+<title>Account Details | SecureBank</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-bank">
+    <div class="container">
+        <a class="navbar-brand" href="dashboard.html">🏦 SecureBank</a>
+        <div class="collapse navbar-collapse justify-content-end">
+            <ul class="navbar-nav align-items-lg-center gap-lg-2">
+                <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+                <li class="nav-item"><a class="nav-link" href="transfer.html">Transfer</a></li>
+                <li class="nav-item"><a class="nav-link" href="transactions.html">Transactions</a></li>
+                <li class="nav-item"><span class="nav-link" id="navUser"></span></li>
+                <li class="nav-item"><button class="btn btn-outline-light btn-sm" onclick="logout()">Logout</button></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container py-4">
+    <a href="dashboard.html" class="btn btn-link px-0 mb-3">&larr; Back to Dashboard</a>
+
+    <div class="row g-4">
+        <div class="col-lg-5">
+            <div class="card balance-card">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-start mb-3">
+                        <span class="badge" id="statusBadge">-</span>
+                        <span class="text-white-50" id="accountTypeLabel">-</span>
+                    </div>
+                    <div class="small text-white-50">Current Balance</div>
+                    <div class="balance-amount" id="balanceAmount">$0.00</div>
+                    <div class="account-number mt-3" id="fullAccountNumber">-</div>
+                    <div class="text-white-50 small mt-1">Opened on <span id="createdAt">-</span></div>
+                </div>
+            </div>
+            <div class="d-grid gap-2 mt-3">
+                <a href="#" id="transferFromBtn" class="btn btn-bank">Transfer from this Account</a>
+                <a href="#" id="viewHistoryBtn" class="btn btn-outline-secondary">View Transaction History</a>
+            </div>
+        </div>
+
+        <div class="col-lg-7">
+            <div class="card card-elevated">
+                <div class="card-body">
+                    <h5 class="card-title mb-3">Account Settings</h5>
+                    <form id="updateAccountForm">
+                        <div class="mb-3">
+                            <label class="form-label">Owner</label>
+                            <input type="text" class="form-control" id="ownerName" disabled>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Account Status</label>
+                            <select class="form-select" id="statusSelect">
+                                <option value="ACTIVE">Active</option>
+                                <option value="INACTIVE">Inactive</option>
+                                <option value="FROZEN">Frozen</option>
+                                <option value="CLOSED">Closed</option>
+                            </select>
+                            <div class="form-text">Freeze an account to temporarily block transfers.</div>
+                        </div>
+                        <button type="submit" class="btn btn-accent" id="updateBtn">Save Changes</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="bank-footer">&copy; 2026 SecureBank. Demo project for portfolio purposes.</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/api.js"></script>
+<script src="js/account-details.js"></script>
+</body>
+</html>
