@@ -235,10 +235,10 @@ mysql -u root -p < schema.sql
 ```
 
 ### Step 2 — Configure credentials
-Edit `src/main/resources/application.properties` if your MySQL username/password differ from the defaults (`root` / `root`):
+Edit `src/main/resources/application.properties` if your MySQL username/password differ from the defaults:
 ```properties
-spring.datasource.username=root
-spring.datasource.password=root
+spring.datasource.username=
+spring.datasource.password=
 ```
 
 ### Step 3 — Run the backend
